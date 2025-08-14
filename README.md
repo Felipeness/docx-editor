@@ -1,10 +1,9 @@
 # DOCX Editor Frontend — Next.js + CKEditor
 
 <p align="center">
-  <a href="https://nextjs.org/"><img alt="Next.js" src="https://img.shields.io/badge/Next.js-14-black?logo=next.js"></a>
-  <a href="https://react.dev/"><img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black"></a>
+  <a href="https://nextjs.org/"><img alt="Next.js" src="https://img.shields.io/badge/Next.js-15-black?logo=next.js"></a>
   <a href="https://ckeditor.com/"><img alt="CKEditor" src="https://img.shields.io/badge/CKEditor-5-3C99DC"></a>
-  <a href="https://typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white"></a>
+  <a href="https://typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white"></a>
 </p>
 
 > Modern DOCX editing frontend built with **Next.js 14**, **React 18**, and **CKEditor 5**, fully integrated with the [editor-backend](https://github.com/Felipeness/editor-backend) for seamless DOCX ⇄ HTML conversion.
