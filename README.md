@@ -1,10 +1,6 @@
 # DOCX Editor Frontend — Next.js + CKEditor
 
 <p align="center">
-  <img src="./banner.png" alt="DOCX Editor Frontend Banner" width="100%" />
-</p>
-
-<p align="center">
   <a href="https://nextjs.org/"><img alt="Next.js" src="https://img.shields.io/badge/Next.js-14-black?logo=next.js"></a>
   <a href="https://react.dev/"><img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black"></a>
   <a href="https://ckeditor.com/"><img alt="CKEditor" src="https://img.shields.io/badge/CKEditor-5-3C99DC"></a>
@@ -16,6 +12,7 @@
 ---
 
 ## Table of Contents
+
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Quickstart](#quickstart)
@@ -30,6 +27,7 @@
 ---
 
 ## Features
+
 - **Import DOCX**: Upload `.docx` files to the backend and convert them into clean, editable HTML.
 - **Export DOCX**: Save edited HTML content back into `.docx` format.
 - **Rich Text Editing**: Powered by CKEditor 5 with custom plugins and toolbar.
@@ -39,6 +37,7 @@
 ---
 
 ## Tech Stack
+
 - **Next.js 15** — App Router, Server Components
 - **CKEditor 5** — Rich text editing
 - **TypeScript**
@@ -49,12 +48,14 @@
 ## Quickstart
 
 ### 1) Clone the repository
+
 ```bash
 git clone https://github.com/Felipeness/docx-editor.git
 cd docx-editor
 ```
 
 ### 2) Install dependencies
+
 ```bash
 pnpm install
 # or
@@ -62,12 +63,15 @@ yarn install
 ```
 
 ### 3) Configure environment variables
+
 Create a `.env.local` file:
+
 ```env
 NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
 ```
 
 ### 4) Run the development server
+
 ```bash
 npm run dev
 # or
@@ -79,13 +83,15 @@ Visit: [http://localhost:3000](http://localhost:3000)
 ---
 
 ## Environment Variables
-| Variable                | Description                          | Default                   |
-|-------------------------|--------------------------------------|---------------------------|
-| `NEXT_PUBLIC_API_URL`   | Backend API base URL                 | `http://127.0.0.1:8000`   |
+
+| Variable              | Description          | Default                 |
+| --------------------- | -------------------- | ----------------------- |
+| `NEXT_PUBLIC_API_URL` | Backend API base URL | `http://127.0.0.1:8000` |
 
 ---
 
 ## Project Structure
+
 ```
 docx-editor/
 ├─ public/                 # Static assets
@@ -102,10 +108,12 @@ docx-editor/
 ---
 
 ## API Integration
+
 The frontend communicates with the backend API documented here:
 [editor-backend API](https://github.com/Felipeness/editor-backend#api)
 
 **Example: Import DOCX**
+
 ```ts
 const fd = new FormData();
 fd.append("file", file);
@@ -118,6 +126,7 @@ const { html, metadata } = await res.json();
 ```
 
 **Example: Export DOCX**
+
 ```ts
 const res = await fetch(\`\${process.env.NEXT_PUBLIC_API_URL}/docx/export\`, {
   method: "POST",
@@ -131,6 +140,7 @@ saveAs(blob, \`\${title || "document"}.docx\`);
 ---
 
 ## Development
+
 ```bash
 pnpm run dev        # Start dev server
 pnpm run build      # Build for production
@@ -140,6 +150,7 @@ pnpm run start      # Run production server
 ---
 
 ## Troubleshooting
+
 - **CORS issues**: Ensure your backend allows requests from the frontend domain.
 - **Import errors (400)**: Ensure you're sending `multipart/form-data` with the correct field name.
 - **Backend not running**: Start the backend before using the frontend.
@@ -147,4 +158,5 @@ pnpm run start      # Run production server
 ---
 
 ## License
+
 MIT License — free to use and modify.
